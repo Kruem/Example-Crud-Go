@@ -10,8 +10,11 @@ install Mysql server
 
 Database 
 
-- Create Database Sistema(
-  Id int primary key identity(1,1),
-  nombre nvarchar(250),
-  correo nvarchar(250)
-)
+- Create Database Sistema()
+
+Table
+- Create table empleados (
+- Id int primary key identity(1,1),
+- nombre nvarchar(250),
+- correo nvarchar(250)
+ )
