@@ -1,0 +1,30 @@
+{{define "Update"}}
+{{template "Header"}}
+
+<div class="card">
+    <div class="card-header">
+     Empleados
+    </div>
+  <div class="card-body">
+    <form method="post" action="/actualizar"> 
+         <div class="form-group">
+            <input class="form-control" type="hidden" name="txtid" id="txtid" value={{.Id}} aria-describedby="helpid" placeholder=""/>
+        </div>
+
+        <div class="form-group">
+            <label>Nombre</label>
+            <input class="form-control" type="text" name="txtnombre" id="txtnombre" value={{.Nombre}} aria-describedby="helpid" placeholder=""/>
+        </div>
+        <div class="form-group">
+            <label>Correo</label>
+            <input class="form-control" type="email" name="txtcorreo" id="txtcorreo"  value={{.Correo}} aria-describedby="helpid" placeholder=""/>
+           
+        </div>
+        <button type="submit" class="btn btn-primary">Modificar</button>
+          <a id="" name="" class="btn btn-primary" href="/">Cancelar</a>
+    </form>
+  </div>
+</div>
+
+{{template "Footer"}}
+{{end}}

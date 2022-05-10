@@ -1,0 +1,32 @@
+{{define "Body"}}
+{{template "Header"}}
+
+<a name="" class="btn btn-primary" href="/Create" role="button">Agregar</a>
+          <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{range.}}
+                <tr>
+                    <td>{{.Id}}</td>
+                    <td>{{.Nombre}}</td>
+                    <td>{{.Correo}}</td>
+                    <td>
+                    <a name="" id="" class="btn btn-warning" href="/Update?id={{.Id}}" role="button">Editar</a>                  
+                    |
+                    <a name="" id="" class="btn btn-danger" href="/Delete?id={{.Id}}" role="button">Borrar</a>
+                  
+                     </td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+
+{{template "Footer"}}
+{{end}}
